@@ -1,0 +1,15 @@
+.subtotal {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 200px;
+  height: 150px;
+  border: 2px solid orange;
+  border-radius: 10px;
+  background-color: whitesmoke;
+  padding: 10px;
+  margin: 2px 4px 0 5px;
+}
+.subtotal_input {
+  font-size: 15px;
+}
