@@ -8,10 +8,18 @@ const SubTotal = () => {
   return (
     <div className="subtotal">
       <CurrencyFormat
+        decimalScale={"2"}
+        value={getCartTotal(cart)}
+        displayType={"text"}
+        prefix={"₹"}
+        thousandSeparator={true}
         renderText={(value) => (
           <>
             <p>
-              Subtotal({cart?.length} items): <strong>{`${value}::`}</strong>
+              Subtotal({cart?.length} items) :{" "}
+              <p>
+                <strong>{`${value} /-`}</strong>
+              </p>
             </p>
             <small>
               <input type="checkbox" />
@@ -19,11 +27,6 @@ const SubTotal = () => {
             </small>
           </>
         )}
-        decimalScale={"2"}
-        value={getCartTotal(cart)}
-        displayType={"text"}
-        prefix={"₹"}
-        thousandSeparator={true}
       />
       <button>Checkout</button>
     </div>
