@@ -2,7 +2,8 @@ import React from "react";
 import { useStateValue } from "../Context/StateProvider";
 import CurrencyFormat from "react-currency-format";
 import "./subtotal.css";
-import { getCartTotal } from "../Context/Reducer";
+import { getCartTotal } from "../Context/Reducer"; // function to add total amount
+
 const SubTotal = () => {
   const [{ cart }] = useStateValue();
   return (
